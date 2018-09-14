@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std; 
+int main(){
+	char n1 = 'C';
+	char n2 = 'h';
+	char n3 = 'i';
+	char n4 = 'n';
+	char n5 = 'a';
+	n1 = n1+4;
+	n2 = n2+4;
+	n3 = n3+4;
+	n4 = n4+4;
+	n5 = n5+4;
+	cout<<n1<<n2<<n3<<n4<<n5<<endl;
+	
+	return 0;
+}
