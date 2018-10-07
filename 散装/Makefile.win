@@ -1,15 +1,15 @@
-# Project: 实验四
+# Project: shujujiegou
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = 实验四main.o
-LINKOBJ  = 实验四main.o
+OBJ      = main.o shujujiegou1.o "lian\ biao.o"
+LINKOBJ  = main.o shujujiegou1.o "lian biao.o"
 LIBS     = -L"F:/Dev-Cpp/MinGW64/lib" -L"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"F:/Dev-Cpp/MinGW64/include" -I"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"F:/Dev-Cpp/MinGW64/include" -I"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = 实验四.exe
+BIN      = 数据结构.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
@@ -24,5 +24,11 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-实验四main.o: 实验四main.cpp
-	$(CPP) -c 实验四main.cpp -o 实验四main.o $(CXXFLAGS)
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+shujujiegou1.o: shujujiegou1.cpp
+	$(CPP) -c shujujiegou1.cpp -o shujujiegou1.o $(CXXFLAGS)
+
+"lian\ biao.o": lian\ biao.cpp
+	$(CPP) -c "lian biao.cpp" -o "lian biao.o" $(CXXFLAGS)
