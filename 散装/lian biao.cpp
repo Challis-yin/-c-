@@ -183,18 +183,16 @@ chain<T>& chain<T>::append(const T& x)
 	y = new chainNode<T>;
 	y->data = x;
 	y->link = 0;
-	if(first){
-		last->link = y;
-		last = y;
+	chainNode<T> *next = first;
+	while(next){
+		next = next->link; 
 	}
-	else{
-		first = last = y;
-	}
+	next->link = y;
 	return *this;
 }
 
 
-
+ 
 
 
 

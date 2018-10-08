@@ -71,7 +71,7 @@ class arrayList : public linearList<T>
  	arrayLength = init;
  	element = new T[arrayLength];
  	listSize = 0;
- }
+ }}
  
 template <class T>
  arrayList<T>::arrayList(const arrayList<T>& theList)
@@ -82,7 +82,7 @@ template <class T>
  	copy(theList.element,theList.element+listsize,element);
  }
  
- /*
+/*
  		CHECK 	GET		INSEXOF
 */
 template<class T>

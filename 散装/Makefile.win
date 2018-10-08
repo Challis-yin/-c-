@@ -1,17 +1,17 @@
 # Project: shujujiegou
 # Makefile created by Dev-C++ 5.11
 
-CPP      = g++.exe
-CC       = gcc.exe
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = main.o shujujiegou1.o "lian\ biao.o"
-LINKOBJ  = main.o shujujiegou1.o "lian biao.o"
-LIBS     = -L"F:/Dev-Cpp/MinGW64/lib" -L"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+OBJ      = main.o shujujiegou1.o "lian\ biao.o" "indirect\ Addressing.o" "Sinulating\ Pointers.o"
+LINKOBJ  = main.o shujujiegou1.o "lian biao.o" "indirect Addressing.o" "Sinulating Pointers.o"
+LIBS     = -L"F:/Dev-Cpp/MinGW64/lib32" -L"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32 -g3
 INCS     = -I"F:/Dev-Cpp/MinGW64/include" -I"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"F:/Dev-Cpp/MinGW64/include" -I"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = 数据结构.exe
-CXXFLAGS = $(CXXINCS) 
-CFLAGS   = $(INCS) 
+CXXFLAGS = $(CXXINCS) -m32 -g3
+CFLAGS   = $(INCS) -m32 -g3
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
@@ -32,3 +32,9 @@ shujujiegou1.o: shujujiegou1.cpp
 
 "lian\ biao.o": lian\ biao.cpp
 	$(CPP) -c "lian biao.cpp" -o "lian biao.o" $(CXXFLAGS)
+
+"indirect\ Addressing.o": indirect\ Addressing.cpp
+	$(CPP) -c "indirect Addressing.cpp" -o "indirect Addressing.o" $(CXXFLAGS)
+
+"Sinulating\ Pointers.o": Sinulating\ Pointers.cpp
+	$(CPP) -c "Sinulating Pointers.cpp" -o "Sinulating Pointers.o" $(CXXFLAGS)
