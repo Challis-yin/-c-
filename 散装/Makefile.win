@@ -1,17 +1,17 @@
-# Project: shujujiegou
+# Project: 项目3
 # Makefile created by Dev-C++ 5.11
 
-CPP      = g++.exe -D__DEBUG__
-CC       = gcc.exe -D__DEBUG__
+CPP      = g++.exe
+CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o shujujiegou1.o "lian\ biao.o" "indirect\ Addressing.o" "Sinulating\ Pointers.o"
-LINKOBJ  = main.o shujujiegou1.o "lian biao.o" "indirect Addressing.o" "Sinulating Pointers.o"
-LIBS     = -L"F:/Dev-Cpp/MinGW64/lib32" -L"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32 -g3
+OBJ      = 实验三/实验三（1）.o 实验三/实验三（2）.o 实验三/实验三（3）.o
+LINKOBJ  = 实验三/实验三（1）.o 实验三/实验三（2）.o 实验三/实验三（3）.o
+LIBS     = -L"F:/Dev-Cpp/MinGW64/lib" -L"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"F:/Dev-Cpp/MinGW64/include" -I"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"F:/Dev-Cpp/MinGW64/include" -I"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = 数据结构.exe
-CXXFLAGS = $(CXXINCS) -m32 -g3
-CFLAGS   = $(INCS) -m32 -g3
+BIN      = 上机实验三.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
@@ -24,17 +24,11 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-main.o: main.cpp
-	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+实验三/实验三（1）.o: 实验三/实验三（1）.cpp
+	$(CPP) -c 实验三/实验三（1）.cpp -o 实验三/实验三（1）.o $(CXXFLAGS)
 
-shujujiegou1.o: shujujiegou1.cpp
-	$(CPP) -c shujujiegou1.cpp -o shujujiegou1.o $(CXXFLAGS)
+实验三/实验三（2）.o: 实验三/实验三（2）.cpp
+	$(CPP) -c 实验三/实验三（2）.cpp -o 实验三/实验三（2）.o $(CXXFLAGS)
 
-"lian\ biao.o": lian\ biao.cpp
-	$(CPP) -c "lian biao.cpp" -o "lian biao.o" $(CXXFLAGS)
-
-"indirect\ Addressing.o": indirect\ Addressing.cpp
-	$(CPP) -c "indirect Addressing.cpp" -o "indirect Addressing.o" $(CXXFLAGS)
-
-"Sinulating\ Pointers.o": Sinulating\ Pointers.cpp
-	$(CPP) -c "Sinulating Pointers.cpp" -o "Sinulating Pointers.o" $(CXXFLAGS)
+实验三/实验三（3）.o: 实验三/实验三（3）.cpp
+	$(CPP) -c 实验三/实验三（3）.cpp -o 实验三/实验三（3）.o $(CXXFLAGS)
